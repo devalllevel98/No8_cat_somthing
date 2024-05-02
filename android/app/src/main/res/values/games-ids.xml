@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Google Play game services IDs.
+
+  TODO: When ready, update this file with actual IDs from Google Play.
+  You can download this file from Google Play Console,
+  in the Play Games Services section. The button is called "Get resources".
+  Details in README.txt.
+-->
+<!--Google Play game services IDs. Save this file as res/values/games-ids.xml in your project.-->
+<resources>
+  <!--app_id-->
+  <string name="app_id" translatable="false">115930804433</string>
+  <!--package_name-->
+  <string name="package_name" translatable="false">com.karscodes.cat_smth</string>
+  <!--leaderboard Cat Something Leaderboard-->
+  <string name="leaderboard_cat_something_leaderboard" translatable="false">CgkI0eGO8K8DEAIQAQ</string>
+</resources>
