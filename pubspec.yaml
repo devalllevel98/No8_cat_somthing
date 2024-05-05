@@ -19,14 +19,16 @@ dependencies:
   logging: ^1.0.2
   provider: ^6.0.2
   shared_preferences: ^2.0.13
+  webview_flutter: ^2.0.13
 
   # If you don't need one of the following dependencies,
   # delete the relevant line below, and get rid of any Dart code
   # that references the dependency.
   games_services: ^3.0.0  # Achievements and leaderboards
-  google_mobile_ads: ^2.0.1  # Ads
-  in_app_purchase: ^3.0.1  # In-app purchases
+# In-app purchases
   go_router: ^14.0.2
+  url_launcher: ^6.2.6
+  flutter_cloud_kit: ^0.0.3
 
 dev_dependencies:
   flutter_test:
@@ -43,6 +45,8 @@ flutter:
     - assets/images/
     - assets/music/
     - assets/sfx/
+    - assets/
+
 
   fonts:
     - family: Permanent Marker

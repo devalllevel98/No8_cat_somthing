@@ -8,12 +8,11 @@ import 'package:game_template/src/play_session/widgets/mouse.dart';
 import 'package:game_template/src/play_session/widgets/score_display.dart';
 import 'package:logging/logging.dart' hide Level;
 import 'package:provider/provider.dart';
-import '../ads/ads_controller.dart';
 import '../game_internals/cat_positioning_service.dart';
 import '../game_internals/collision_service.dart';
 import '../game_internals/dogs_positioning_service.dart';
 import '../game_internals/game_service.dart';
-import '../in_app_purchase/in_app_purchase.dart';
+
 import 'widgets/cat.dart';
 import 'widgets/dog.dart';
 
@@ -42,12 +41,6 @@ class _PlaySessionScreenState extends State<PlaySessionScreen>
     _gameService = Provider.of<GameService>(context, listen: false);
     _collisionService = Provider.of<CollisionService>(context, listen: false);
     // Preload ad for the win screen.
-    final adsRemoved =
-        context.read<InAppPurchaseController?>()?.adRemoval.active ?? false;
-    if (!adsRemoved) {
-      final adsController = context.read<AdsController?>();
-      adsController?.preloadAd();
-    }
     _numberOfDogs = _gameService.numberOfDogs;
 
     int durationBetweenPointsForDogs =

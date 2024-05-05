@@ -138,7 +138,7 @@ class _MainMenuScreenState extends State<MainMenuScreen>
               ),
             ),
             MainMenuScreen._gap,
-            const Text('developed by SerhanK'),
+            // const Text('developed by SerhanK'),
             MainMenuScreen._gap,
           ],
         ),

@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
-import '../in_app_purchase/in_app_purchase.dart';
 import '../style/palette.dart';
 import '../style/responsive_screen.dart';
 import 'custom_name_dialog.dart';
@@ -63,36 +62,7 @@ class SettingsScreen extends StatelessWidget {
                 onSelected: () => settings.toggleMusicOn(),
               ),
             ),
-            Consumer<InAppPurchaseController?>(
-                builder: (context, inAppPurchase, child) {
-              if (inAppPurchase == null) {
-                // In-app purchases are not supported yet.
-                // Go to lib/main.dart and uncomment the lines that create
-                // the InAppPurchaseController.
-                return const SizedBox.shrink();
-              }
-
-              Widget icon;
-              VoidCallback? callback;
-              if (inAppPurchase.adRemoval.active) {
-                icon = Icon(
-                  Icons.check,
-                  color: palette.pen,
-                );
-              } else if (inAppPurchase.adRemoval.pending) {
-                icon = const CircularProgressIndicator();
-              } else {
-                icon = Icon(Icons.ad_units, color: palette.pen);
-                callback = () {
-                  inAppPurchase.buy();
-                };
-              }
-              return _SettingsLine(
-                'Remove ads',
-                icon,
-                onSelected: callback,
-              );
-            }),
+   
             _gap,
           ],
         ),
